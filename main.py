@@ -15,9 +15,7 @@ def main():
     parser.add_argument('--dir', '-d', required=True, type=str,help='Папка, в которой располагаются документы доверенности')
     args = parser.parse_args()
     path = args.dir
-    # path = 'доверенности'
     files = get_files(path)
-    # keyword = 'июль'
     keyword = args.keyword
     keyword = keyword.lower()
     for file in files[::-1]:
